@@ -25,7 +25,7 @@ const TYPE_MAP = {
   18: "sint64",
 };
 
-export function parse(data: string) {
+export function parse(data: string): string {
   let lines: string[] = data.split("\r\n").map((x) => x.trim());
 
   let moduleName = "";
@@ -150,4 +150,6 @@ export function parse(data: string) {
     msgLines.push("}", "");
     file = file.concat(msgLines);
   }
+
+  return file.join("\r\n");
 }

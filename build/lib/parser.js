@@ -141,5 +141,6 @@ function parse(data) {
         msgLines.push("}", "");
         file = file.concat(msgLines);
     }
+    return file.join("\r\n");
 }
 exports.parse = parse;
